@@ -6,7 +6,7 @@ client = TestClient(app)
 route = "fishermen/"
 
 
-def test_root():
+def test_root() -> None:
     res: Response = client.get(f"/{route}")
     assert res.status_code == 200
     data: list[dict] = res.json()

@@ -12,5 +12,11 @@ from the main project directory:
 uvicorn app.main:app --reload
 ```
 
-# Testing 
-let's use pytest and write test alongside each file being tested. See main.py for an example
+# Testing
+```bash
+pytest
+``` 
+or, to run with output: 
+```bash
+pytest -rP
+```
