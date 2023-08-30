@@ -10,4 +10,4 @@ app.include_router(fishermen_router, prefix="/fishermen")
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "FishTrak API"}
