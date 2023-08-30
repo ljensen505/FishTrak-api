@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional
 
 
 class Fisherman(BaseModel):
@@ -8,3 +9,28 @@ class Fisherman(BaseModel):
     # str(uuid.uuid4())
     fisherman_id: int
     name: str
+
+
+class Species(BaseModel):
+    species_id: int
+    name: str
+    avg_weight: float
+    is_freshwater: bool
+    description: Optional[str] = None
+
+
+class WaterBody(BaseModel):
+    body_id: int
+    name: str
+    is_freshwater: bool
+    is_stocked: bool
+    latitude: float
+    longitude: float
+
+
+class Lure(BaseModel):
+    lure_id: int
+    weight: float
+    name: str
+    color: str
+    type: str

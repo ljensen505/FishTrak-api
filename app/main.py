@@ -1,11 +1,14 @@
 from fastapi import FastAPI
 
 from app.routers.fishermen import router as fishermen_router
-from dotenv import load_dotenv
+from app.routers.species import router as species_router
+from app.routers.lures import router as lure_router
 
 app = FastAPI()
 
 app.include_router(fishermen_router, prefix="/fishermen")
+app.include_router(species_router, prefix="/species")
+app.include_router(lure_router, prefix="/lures")
 
 
 @app.get("/")
