@@ -34,3 +34,7 @@ class Lure(BaseModel):
     name: str
     color: str
     type: str
+
+
+class CaughtFish(BaseModel):
+    pass

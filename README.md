@@ -7,6 +7,8 @@
 </ul>
 
 # To run application locally
+This must be run with python3.11 or later, with which you can create a virtual environment and install from requirements.txt as you see fit
+
 from the main project directory:
 ```bash
 uvicorn app.main:app --reload
