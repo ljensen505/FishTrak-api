@@ -20,12 +20,19 @@ def connect():
 
 
 class Controller:
+    """
+    A generic Controller class which should be inhereted from.
+    All methods should be private.
+    This class should never be instantiated.
+    """
+
     def __init__(self) -> None:
         self.db_conn: CMySQLConnection = connect()  # type: ignore
-        print(type(self.db_conn))
-        self.table: None | str = None
+        self.table: None | str = (
+            None  # used to define the mysql table name in child class(es)
+        )
 
-    def get_all(self) -> list[dict]:
+    def _get_all(self) -> list[dict]:
         if self.table is None:
             raise Exception(
                 "You did something wrong with inheriting from the base Controller class.\nYou idiot."

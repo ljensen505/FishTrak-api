@@ -8,4 +8,4 @@ class FishermanController(Controller):
         self.table = "Fisherman"
 
     def get_fishermen(self) -> list[Fisherman]:
-        return [Fisherman(**f) for f in self.get_all()]
+        return [Fisherman(**f) for f in self._get_all()]
