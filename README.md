@@ -7,7 +7,7 @@
 </ul>
 
 # To run application locally
-This must be run with python3.11 or later, with which you can create a virtual environment and install from requirements.txt as you see fit
+This must be run with python3.11 or later, with which you can create a virtual environment and install from requirements.txt as you see fit. Be sure to look at the <code>example.env</code> file and create a <code>.env</code> file in the same directory with correct values.
 
 from the main project directory:
 ```bash
