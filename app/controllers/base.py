@@ -9,11 +9,12 @@ def connect():
     load_dotenv()
 
     db_password = environ.get("DB_PASSWORD")
-    if db_password is None:
-        raise Exception("Did you remember to add you mysql password to the .env file?")
+    user = environ.get("USER")
+    if None in [db_password, user]:
+        raise Exception("Did you remember to add info to your .env file?")
 
     db_conn = mysql.connector.connect(
-        host="localhost", user="lucas", password=db_password, database="fishtrak"
+        host="localhost", user=user, password=db_password, database="fishtrak"
     )
 
     return db_conn
