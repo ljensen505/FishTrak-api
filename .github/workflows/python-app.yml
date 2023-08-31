@@ -49,8 +49,9 @@ jobs:
         sudo mysql -e "CREATE DATABASE fishtrak;"
         sudo mysql -e "GRANT ALL PRIVILEGES ON fishtrak.* TO '$USER'@'localhost';"
         sudo mysql -e "FLUSH PRIVILEGES;"
-        pwd
-        ls
+    - name: Seed Database with DDL.sql
+      run: |
+        mysql -u $USER -p$DB_PASSWORD fishtrak < sql/DDL.sql
     - name: Test with pytest
       run: |
-        pytest
+        pytest -rP
