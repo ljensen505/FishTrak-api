@@ -1,9 +1,9 @@
 # To seed database
 <ul>
-<li>ensure mariadb is installed</li> 
+<li>ensure mysql is installed and running (both mysql and mariad are known to work)</li> 
 <li>ensure a Database named <code>fishtrak</code> exists</li> 
 <li>ensure you have a user and password for mysql on localhost, and that your user has full privileges on the fishtrak database</li> 
-<li>run: <code>mysql -u [username] -p -h localhost fishtrak < path/to/DDL.sql</code></li>
+<li>run: <code>mysql -u [username] -p fishtrak < sql/DDL.sql</code></li>
 </ul>
 
 # To run application locally
